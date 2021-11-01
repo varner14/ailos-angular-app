@@ -1,0 +1,42 @@
+<mat-drawer-container>
+
+  <mat-drawer mode="side" disableClose="true" opened="true" opened>
+    <div class="ailos-menu">
+      <div class="ailos-menu-icon">
+        <img src="../../../assets/images/ailos.png" alt="city catt menu">
+      </div>
+
+      <mat-nav-list>
+        <mat-list-item>
+          <mat-icon mat-list-icon>menu</mat-icon>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon class="active" mat-list-icon>search</mat-icon>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>star_outline</mat-icon>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>message</mat-icon>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>tune</mat-icon>
+        </mat-list-item>
+        <mat-list-item>
+          <mat-icon mat-list-icon>account_balance</mat-icon>
+        </mat-list-item>
+      </mat-nav-list>
+    </div>
+  </mat-drawer>
+
+  <mat-drawer-content>
+    <div class="nav-group">
+      <ailos-navbar></ailos-navbar>
+    </div>
+    <div class="container-fluid">
+      <ailos-main-layout></ailos-main-layout>
+    </div>
+
+  </mat-drawer-content>
+
+</mat-drawer-container>

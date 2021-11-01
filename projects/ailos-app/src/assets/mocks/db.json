@@ -1,0 +1,28 @@
+{
+  "cooperado": [
+    {
+      "id": 1,
+      "cpf": "02233344428",
+      "name": "Maria da Rosa",
+      "situation": "Regular",
+      "accountNumber": "257922-2",
+      "cc": "235175-4"
+    },
+    {
+      "id": 2,
+      "cpf": "11112123474",
+      "name": "Pedro Henrique",
+      "situation": "Regular",
+      "accountNumber": "557932-4",
+      "cc": "778461-8"
+    },
+    {
+      "id": 1,
+      "cpf": "21312123443",
+      "name": "Jorge Garcia",
+      "situation": "Regular",
+      "accountNumber": "663432-7",
+      "cc": "323534-2"
+    }
+  ]
+}

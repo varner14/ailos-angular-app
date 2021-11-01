@@ -1,0 +1,89 @@
+<div class=”container-fluid”>
+  <div class="stepper-wrapper">
+    <div class="stepper">
+      <ul class="progressbar">
+        <li class="active"><span>Início</span></li>
+        <li><span>Documentos</span></li>
+        <li><span>Dados Cadastrais</span></li>
+        <li><span>Admissão</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="aiolos-user-info">
+    <div class="text-wrapper">
+      <span class="text-bold">Informe o CPF do futuro Cooperado (a)</span>
+      <span>Se necessário você poderá duplicar uma conta existente ou passar a retomar este cadastro futuramente.</span>
+      <span>Digite apenas os números (sem pontos ou traços).</span>
+    </div>
+    <form  [formGroup]="searchForm">
+      <div class="form-group aiolos-form-group ">
+        <label class="" for="cpf" >CPF</label>
+        <input type="text" id="cpf" name="cpf" class="form-control input-aiolos " placeholder="000.000.000-00" formControlName="cpf" mask="000.000.000-00" required   />
+        <button (click)="findCooperative()">Consultar por CPF</button>
+      </div>
+    </form>
+
+    <div class="cooperado-info">
+      <div class="cooperado-cards" *ngIf="cooperado">
+        <div class="card">
+          <div class="info-wrapper">
+            <span class="title">Situação Cadastral do CPF</span>
+            <span class="sub-title">Consulta na Receita Federal</span>
+          </div>
+          <div class="name-wrapper">
+            <mat-icon>person</mat-icon>
+            <div class="cooperado">
+              <span class="label">Nome</span>
+              <span class="nome">{{cooperado.name}}</span>
+            </div>
+          </div>
+          <div class="name-wrapper">
+            <mat-icon class="green">check_circle_outlined</mat-icon>
+            <div class="cooperado">
+              <span class="label">Situação do CPF</span>
+              <span class="nome">{{cooperado.situation}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info-wrapper">
+            <span class="title">Conta aplicação</span>
+            <span class="sub-title">Cooperativa Viacredi</span>
+          </div>
+          <div class="name-wrapper">
+            <mat-icon>payment</mat-icon>
+            <div class="cooperado">
+              <span class="label">Número da conta</span>
+              <span class="nome">{{cooperado.accountNumber}}</span>
+            </div>
+          </div>
+          <div class="name-wrapper">
+           <a>Duplicar Conta</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="info-wrapper">
+            <span class="title">Conta Corrente</span>
+            <span class="sub-title">Cooperativa Viacredi</span>
+          </div>
+          <div class="name-wrapper">
+            <mat-icon>payment</mat-icon>
+            <div class="cooperado">
+              <span class="label">Número da conta</span>
+              <span class="nome">{{cooperado.cc}}</span>
+            </div>
+          </div>
+          <div class="name-wrapper">
+           <a>Duplicar Conta</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="aiolos-footer">
+    <button *ngIf="cooperado" class="new-coop">Iniciar nova admissão</button>
+    <button>Dicas para admissão</button>
+  </div>
+</div>
